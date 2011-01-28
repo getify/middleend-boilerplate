@@ -1,0 +1,11 @@
+## Middle-End Boilerplate (.htaccess)
+## (c) Kyle Simpson
+## MIT License
+
+Options +ExecCGI
+AddHandler cgi-script routing
+XSendFile on
+XSendFileAllowAbove on
+
+RewriteEngine on
+RewriteRule .* middle/uri.routing [L]

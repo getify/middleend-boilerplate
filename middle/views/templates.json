@@ -1,0 +1,12 @@
+/*!	Middle-End Boilerplate (templates.json)
+	(c) Kyle Simpson
+	MIT License
+*/
+
+{
+	"index": "views/tmpl.index.html#master",
+	"index_partial": "views/tmpl.index.html#content",
+	
+	"error": "views/tmpl.index.html#master",
+	"error_partial": "views/tmpl.index.html#content"
+}

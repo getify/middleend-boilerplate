@@ -1,0 +1,47 @@
+{$/	Middle-End Boilerplate (tmpl.master.html)
+	(c) Kyle Simpson
+	MIT License
+/$}
+
+
+{$: "#master" }<!DOCTYPE html>
+<html>
+	<head>
+	<title>Middle-End Boilerplate</title>
+	
+	{$= @"#styles" $}
+	</head>
+	
+	<body>
+	
+	{$= @"#content" $}
+
+	{$= @"#script_loading" $}
+	
+	</body>
+</html>
+{$}
+
+
+{$: "#styles" }
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+{$}
+
+
+{$: "#script_loading" }
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/controllers/validate.js"></script>
+<script src="/controllers/format.js"></script>
+<script>
+	init();
+</script>
+<script src="/controllers/handlebar/handlebar.js"></script>
+<script src="/controllers/handlebar/util.handlebar.js"></script>
+<script src="/bikechain/misc/minify.json.js"></script>
+<script src="/controllers/handlebar/promise.handlebar.js"></script>
+<script src="/controllers/handlebar/xhr-loader.handlebar.js"></script>
+<script>
+	Handlebar.init("/views/templates.json");
+</script>
+{$}
